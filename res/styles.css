@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap');
+
+:root {
+    --ff-primary: "nunito", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    width: 85%;
+}
+
+header i {
+    margin-right: .5rem;
+}
+
+#form-container {
+    padding: 2rem;
+}
+
+#form {
+width: 50%;
+margin: auto;
+text-align: center;
+transition: all 150ms ease-in-out;
+}
+
+#form.active {
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    padding: .2rem;
+    border-radius: 5px;
+}
+
+#form input {
+    /* display: inline; */
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: .2rem;
+    font-family: inherit;
+}
+
+#form-buttons{
+    display: none; 
+    margin: 0;
+    padding: 0;
+}
+
+#form-buttons.active {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+#form-buttons button {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+    
+}
+
+#placeholder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+#placeholder i {
+    margin-right: .5rem;
+}
+
+#form #note-title{
+    display: none;
+}
+
+#form #note-title.active {
+    display: block;
+}
+
+
+#notes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+}
+
+.note-wrapper {
+    box-shadow: 0 0 1px rgba(0,0,0,.8);
+    padding: 3rem;
+    margin: .5rem;
+    text-align: center;
+    position: relative;
+    border-radius: 3px;
+    transition: all 150ms ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.897);
+}
+
+.note-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 1px 2px 2px rgba(0,0,0,.5);
+}
+
+.note-wrapper.delete {
+    transform: translateX(-20px);
+}
+
+.note-title {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.note-text {
+    font-size: 1.6rem;
+}
+
+.note-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    cursor: pointer;
+    color: rgba(105, 105, 105, 0.938);
+}
+
+.remove-effect {
+    transform: translate(-20px);
+}
+
+.modal {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 2000;
+    overflow: hidden;
+    display: grid;
+    place-content: center;
+    transition: all 250ms ease;
+    background: rgba(0,0,0,.5);
+    transform: translateY(-20%);
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 6rem;
+    font-family: inherit;
+    z-index: 1000;
+}
+
+.modal-edit-btn {
+    margin-top: 2rem;
+    border-radius: 3px;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
+    padding: .5rem;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: all 150ms ease;
+}
+
+.modal-edit-btn:hover {
+    background: rgb(5, 143, 185);
+    color: white;
+}
+
+.modal-content input {
+    padding: .6rem;
+    margin: .2rem;
+    border: none;
+    font-size: 1.5rem;
+    border-bottom: 2px solid grey;
+    transition: all 120ms linear;
+}
+.modal-content input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(5, 143, 185);
+}
+
+.open-modal{
+    opacity: 1;
+    visibility: unset;
+    transform: translateY(0);
+}
+
+.fa-times-circle {
+    transition: all 150ms ease-out;
+}
+
+.fa-times-circle:hover {
+    color:rgba(51, 51, 51, 0.938);
+}
+

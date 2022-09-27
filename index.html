@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Note Keeper | daxoron | Anish</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="res/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="modal">
+        <div class="modal-content">
+          <input class="modal-title" placeholder="Title" type="text" />
+          <input
+            class="modal-text"
+            placeholder="Insert Note Here..."
+            type="text"
+          />
+          <span class="modal-edit-btn">Submit</span>
+        </div>
+      </div>
+      <header>
+        <h1 id="header-title"><i class="fas fa-lightbulb"></i>Notes</h1>
+      </header>
+      <div id="form-container">
+        <form id="form" autocomplete="off">
+          <input id="note-title" type="text" placeholder="Title" />
+          <input id="note-text" type="text" placeholder="Write a note..." />
+          <div id="form-buttons">
+            <button type="submit" id="submit-button">Submit</button>
+            <button type="text" id="form-close-button">Delete</button>
+          </div>
+        </form>
+      </div>
+      <div id="notes"></div>
+      <div id="placeholder">
+        <i class="far fa-sticky-note"></i>
+        <p id="placeholder-text">All notes will show here</p>
+      </div>
+    </main>
+
+    <script src="res/script.js"></script>
+  </body>
+</html>
