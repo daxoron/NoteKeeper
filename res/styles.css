@@ -105,12 +105,12 @@ transition: all 150ms ease-in-out;
 }
 
 .note-wrapper {
-    box-shadow: 0 0 1px rgba(0,0,0,.8);
+    box-shadow: 0 1px 1px rgba(0,0,0,.8);
     padding: 3rem;
     margin: .5rem;
     text-align: center;
     position: relative;
-    border-radius: 3px;
+    border-radius: 10px;
     transition: all 150ms ease;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.897);
