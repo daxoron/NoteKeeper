@@ -149,8 +149,8 @@ class App {
     if (hasNotes) {
     }
     this.$headerTitle.innerHTML = hasNotes
-      ? `<i class="far fa-lightbulb"></i>Notes`
-      : `<i class="fas fa-lightbulb"></i>Notes`;
+      ? `</i>Notes Keeper`
+      : `</i>Notes Keeper`;
     this.placeholder.style.display = hasNotes ? "none" : "flex";
 
     this.$notes.innerHTML = this.notes
